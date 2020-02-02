@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Выпускная работа</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link rel="stylesheet"  href="css/style.css">
+</head>
+<body>
+	<main class="main">
+		<div class="container">
+			<header class="header">
+				<div class="logo">
+					<img src="img/logo.png">
+				</div>
+				<nav class="header_menu">
+					<ul class="menu">
+						<li class="link-item"><a href="#">Главная</a></li>
+						<li class="link-item"><a href="#advantage">Преимущества</a></li>
+						<li class="link-item"><a href="#catalog">Каталог</a></li>
+						<li class="link-item"><a href="#contancts">Контакты</a></li>
+					</ul>
+				</nav>
+				<div class="menu_btn">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</header>
+			<div class="main_text">
+				<h1>Буст</h1>
+				<span>Буст аккаунтов для кс го</span>
+				<a href="#" class="btn">Подробнее<a>
+			</div>
+			<div class="main_arrow">
+				<div class="arrow-down">
+					<a href="">
+						<i class="fa fa-caret-square-o-down" aria-hidden="true"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</main>
+	<section class="advantage" id="advantage">
+		<div class="section_header">
+			<h2>Преимущества</h2>
+		</div>
+		<div class="advantage_content">
+			<div class="item"><i class="fa fa-check-square" aria-hidden="true"></i><span>Гарантии</span></div>
+			<div class="item"><i class="fa fa-toggle-on" aria-hidden="true"></i><span>Честность</span></div>
+			<div class="item"><i class="fa fa-rub" aria-hidden="true"></i><span>Недорого</span></div>
+			<div class="item"><i class="fa fa-times" aria-hidden="true"></i><span>Без читов</span></div>
+		</div>
+	</section>
+	<section class="catalog" id="catalog">
+		<div class="container">
+			<div class="section_header">
+				<h2>Каталог</h2>
+			</div>
+			<div class="catalog_content">
+				<div class="catalog_item">
+					<div class="catalog_item_header">
+						<h3>до  1  звезды</h3>
+					</div>
+					<div class="catalog_item_img" style="background-image:url(img/catalog_img1.png);"></div>
+					
+					<p><span>Цена 1 звезды</span>99р</p>
+					<p><span>4 сильвер до 6 сильвера</span>80р</p>
+					<p><span>1 сильвер-4сильвера</span>30р</p>
+					<a href="https://www.facebook.com/profile.php?id=100026112031699"  class="btn">Купить</a>
+				</div>
+				<div class="catalog_item">
+					<div class="catalog_item_header">
+						<h3>До 2 калашей</h3>
+					</div>
+					<div class="catalog_item_img" style="background-image:url(img/catalog_img2.png);"></div>
+					<p><span>цена 2 калаша</span>250</p>
+					<p><span>калаш с винками-2 калаша</span>150р</p>
+					<p><span>калаш-калаш с винками</span>130р</p>
+					<a href="https://www.facebook.com/profile.php?id=100026112031699" class="btn">Купить</a>
+				</div>
+				<div class="catalog_item">
+					<div class="catalog_item_header">
+						<h3>До глобала</h3>
+					</div>
+					<div class="catalog_item_img" style="background-image:url(img/catalog_img3.png);"></div>
+					<p><span>цена за глобала</span>500р</p>
+					<p><span>лем-суприм</span>450р</p>
+					<p><span>беркут-лем</span>400р</p>
+					<a href="https://www.facebook.com/profile.php?id=100026112031699" class="btn">Купить</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="contancts" id="contancts">
+		<div class="container">
+			<div class="section_header">
+				<h2>Контакты</h2>
+			</div>
+		</div>
+		<div class="map">
+			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab85740f706c46c6a8d74296db1f61d1eab88bdd0440ddc047f3254ab394b8759&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=fasle"></script>
+			<div class="card">
+				<div class="card_logo">
+					<img src="img/logo.png">
+				</div>
+				<div class="card_text">
+					<p>denissmex1997@mail.ru</p>
+					<p>9158231109</p>
+					<p>ТЦ Тополь,Иваново</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<p>&#169;copyright<p>
+	</footer>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$("a[href^='#']").click(function(){
+				var _href = $(this).attr("href");
+				$("html , body").animate({scrollTop: $(_href).offset().top+"px"});
+				return false;
+			});
+			$(".menu_btn").click(function(){
+				$(this).toggleClass("active");
+				$(".header_menu").toggleClass("active");
+				$("body").toggleClass("active");
+			});
+			$(".link-item a").click(function(){
+				if($(".menu_btn").hasClass("active")){
+					$(".menu_btn").toggleClass("active");
+					$(".header_menu").toggleClass("active");
+					$("body").toggleClass("active");
+				}
+			});
+		});
+	</script>
+</body>
+</html>
