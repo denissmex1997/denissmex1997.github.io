@@ -24,6 +24,11 @@
 						<li class="link-item"><a href="#contancts">Контакты</a></li>
 					</ul>
 				</nav>
+				<div class="menu_btn">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
 			</header>
 			<div class="main_text">
 				<h1>Буст</h1>
@@ -120,6 +125,18 @@
 				var _href = $(this).attr("href");
 				$("html , body").animate({scrollTop: $(_href).offset().top+"px"});
 				return false;
+			});
+			$(".menu_btn").click(function(){
+				$(this).toggleClass("active");
+				$(".header_menu").toggleClass("active");
+				$("body").toggleClass("active");
+			});
+			$(".link-item a").click(function(){
+				if($(".menu_btn").hasClass("active")){
+					$(".menu_btn").toggleClass("active");
+					$(".header_menu").toggleClass("active");
+					$("body").toggleClass("active");
+				}
 			});
 		});
 	</script>
